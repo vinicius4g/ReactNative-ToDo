@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Alert } from 'react-native';
 
 import { Header } from '../components/Header';
 import { MyTasksList } from '../components/MyTasksList';
@@ -11,20 +12,63 @@ interface Task {
 }
 
 export function Home() {
-  // const [tasks, setTasks] = useState<Task[]>([]);
-
+  
+  const [ tasks, setTasks] = useState<Task[]>([])
+  
   function handleAddTask(newTaskTitle: string) {
-    //TODO - add new task if it's not empty
+    if(newTaskTitle){
+      if(newTaskTitle != '' || typeof newTaskTitle === 'string'){
+        const task: Task = {
+          id: new Date().getTime(),
+          title: newTaskTitle,
+          done: false
+        } 
+        setTasks(oldState => [...oldState, task])  
+      }
+    }
+    else {
+      return Alert.alert('Adição de task negada 😢 !','Campo Vazio ou Inválido!')
+    }
   }
-
   function handleMarkTaskAsDone(id: number) {
-    //TODO - mark task as done if exists
+    const tasksAux = tasks.map(task =>{ 
+      
+      if(task.id === id){
+        return {
+          ...task,
+          done: !task.done
+        }
+        }else{
+          return task
+      }
+    })
+    setTasks(tasksAux);
   }
 
   function handleRemoveTask(id: number) {
-    //TODO - remove task from state
+    const removeTask = () => {
+      
+      let tasksAux: Array<Task> = [];
+    
+      tasks.filter(item => {
+        if(item.id != id){
+          tasksAux.push(item)
+        }
+      })
+      setTasks(tasksAux)
+    }
+    Alert.alert('Remoção de Task  🤔','Você está removendo uma task, tem certeza disso?', [
+      {
+        text: 'Cancelar',
+        onPress: () => null
+      },
+      {
+        text: 'Remover',
+        onPress: removeTask
+      }
+    ])
   }
-
+  
   return (
     <>
       <Header />
