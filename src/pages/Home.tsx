@@ -45,28 +45,17 @@ export function Home() {
     setTasks(tasksAux);
   }
 
-  function handleRemoveTask(id: number) {
-    const removeTask = () => {
-      
+  function handleRemoveTask(id: number) {  
       let tasksAux: Array<Task> = [];
-    
+      
       tasks.filter(item => {
         if(item.id != id){
           tasksAux.push(item)
         }
       })
       setTasks(tasksAux)
-    }
-    Alert.alert('Remoção de Task  🤔','Você está removendo uma task, tem certeza disso?', [
-      {
-        text: 'Cancelar',
-        onPress: () => null
-      },
-      {
-        text: 'Remover',
-        onPress: removeTask
-      }
-    ])
+    
+    Alert.alert('Remoção de Task 😬  ','Você removeu uma task')
   }
   
   return (
