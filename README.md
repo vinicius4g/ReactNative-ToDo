@@ -10,6 +10,7 @@ O aplicativo registra suas atividades diárias afim de você ter um controle de 
 É possível criar, marcar como concluida e deletar uma tarefa.
 
 <br>
+
 ## 🔨 Techs
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -18,6 +19,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeScript](https://www.typescriptlang.org/docs/)
 
 <br>
+
 ## 🚀 Como executar
 
 - Clone o repositório
