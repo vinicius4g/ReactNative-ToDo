@@ -4,11 +4,12 @@
 ## 💻 Projeto
 
 App mobile em React Native, feito em estudo. 
+<br>
 O aplicativo registra suas atividades diárias afim de você tem um controle.
 <br>
 É possível criar, marcar como concluida e deletar uma tarefa.
 
-<br><br>
+<br>
 ## 🔨 Techs
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -16,7 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native](https://reactnative.dev/docs/getting-started)
 - [TypeScript](https://www.typescriptlang.org/docs/)
 
-<br><br>
+<br>
 ## 🚀 Como executar
 
 - Clone o repositório
