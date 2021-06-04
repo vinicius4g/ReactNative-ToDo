@@ -5,7 +5,7 @@
 
 App mobile em React Native, feito em estudo. 
 <br>
-O aplicativo registra suas atividades diárias afim de você tem um controle.
+O aplicativo registra suas atividades diárias afim de você ter um controle de suas tarefas.
 <br>
 É possível criar, marcar como concluida e deletar uma tarefa.
 
